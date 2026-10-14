@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf7ef">
+  <meta name="description" content="Discover Sweet Crumbs cakes, build your cake box, or enquire about a custom cake for your next celebration.">
+  <title>Sweet Crumbs — A little sweetness for every celebration</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/strawberry.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><span aria-hidden="true">✧</span> Little moments. Big celebrations. Always cake. <span aria-hidden="true">✧</span></div>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" aria-label="Sweet Crumbs home">
+        <svg class="brand-mark" viewBox="0 0 44 48" fill="none" aria-hidden="true"><path d="M8 27h28l-3 15H11L8 27Z"/><path d="M8 27c-7-6 0-13 6-11-2-8 14-11 16-2 8-1 13 8 6 13M16 30l1 8m6-8v8m6-8-1 8M23 7V3m-2 0h4"/><path d="M10 23c7 4 17 4 25 0"/></svg>
+        <span>sweet crumbs<span class="brand-subtitle">a little slice of happiness</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#cakes">Our Cakes</a>
+        <a class="nav-link" href="#custom">Custom Cakes</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-toggle" id="cart-toggle" type="button" aria-label="Open cart, 0 items" aria-haspopup="dialog" aria-controls="cart-dialog">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>
+          <span class="cart-label">Your box</span><span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle icon-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO SWEET CRUMBS</p>
+        <h1 id="hero-title">A little sweetness<br class="desktop-break"> for every<br> <em>celebration.</em></h1>
+        <p class="hero-description">For the birthdays, the big days, and the just-because days. Find a cake that makes your moment a little sweeter.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#cakes">Explore Cakes <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#custom">Order a Custom Cake <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-footnote"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 21-8-8C-2 6 7-1 12 6c5-7 14 0 8 7l-8 8Z"/></svg><span>Good cake. Lovely company. Happy memories.</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-wrap"><img class="hero-image" src="assets/strawberry.webp" alt="Strawberry cake with ivory frosting, pink buttercream swirls, and fresh strawberries on a ceramic stand" width="1024" height="1280" fetchpriority="high"></div>
+        <div class="cake-seal" aria-hidden="true"><span>A LITTLE SLICE OF</span><svg viewBox="0 0 36 36" fill="none"><path d="m18 31-11-11C-1 10 12 1 18 10c6-9 19 0 11 10L18 31Z"/></svg><span>HAPPINESS</span></div>
+        <div class="hero-caption"><span>Meet your next happy moment.</span><span aria-hidden="true">↗</span></div>
+        <span class="hero-sparkle" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <div class="occasion-strip" aria-label="Cakes for every occasion">
+      <div class="container occasion-inner"><span>Birthday wishes</span><span aria-hidden="true">✧</span><span>Wedding moments</span><span aria-hidden="true">✧</span><span>Little milestones</span><span aria-hidden="true">✧</span><span>Just-because treats</span></div>
+    </div>
+
+    <section class="collection section-space container" id="cakes" aria-labelledby="cakes-title">
+      <div class="section-heading">
+        <p class="eyebrow">THE CAKE COLLECTION</p>
+        <h2 id="cakes-title">Find your kind of <em>sweet.</em></h2>
+        <p>A little chocolate? A little berry? Something for everyone at the table.</p>
+      </div>
+      <div class="cake-filters" role="group" aria-label="Filter cakes by category">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All cakes <span>6</span></button>
+        <button class="filter-button" type="button" data-filter="classics" aria-pressed="false">Everyday classics</button>
+        <button class="filter-button" type="button" data-filter="fruit" aria-pressed="false">Fruit &amp; cream</button>
+        <button class="filter-button" type="button" data-filter="celebrations" aria-pressed="false">Celebrations</button>
+      </div>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="cake-grid" id="cake-grid"></div>
+      <noscript><p class="notice">Please enable JavaScript to explore the cake collection, use the cart, and prepare a cake enquiry.</p></noscript>
+      <p class="sample-note">Sample collection · Prices shown are examples. Final price and availability are confirmed with the bakery.</p>
+    </section>
+
+    <section class="custom-section" id="custom" aria-labelledby="custom-title">
+      <div class="custom-inner container">
+        <div class="custom-story">
+          <p class="eyebrow">YOUR OCCASION. YOUR CAKE.</p>
+          <h2 id="custom-title">You dream it.<br>We <em>cake</em> it.</h2>
+          <p>A favourite flavour, a special message, a moment that's all yours. Tell us what you have in mind and let's make something lovely.</p>
+          <div class="custom-photo"><img src="assets/wedding.webp" alt="Two-tier ivory wedding cake decorated with blush roses and sage leaves" width="1024" height="1024" loading="lazy"><span class="photo-caption">Made for your kind of celebration.</span></div>
+        </div>
+        <form class="custom-form" id="custom-form">
+          <div class="form-heading"><h3>Let's plan your cake</h3><p>The lovely details start here.</p></div>
+          <div class="form-grid">
+            <div class="form-field"><label for="flavour">Preferred flavour <span aria-hidden="true">*</span></label><select id="flavour" name="flavour" required><option value="" disabled selected>Pick your flavour</option><option>Chocolate</option><option>Vanilla</option><option>Red velvet</option><option>Strawberry</option><option>Help me choose</option></select></div>
+            <div class="form-field"><label for="size">Cake size <span aria-hidden="true">*</span></label><select id="size" name="size" required><option value="" disabled selected>Choose a size</option><option>500 g</option><option>1 kg</option><option>1.5 kg</option><option>2 kg</option><option>2.5 kg or larger</option><option>Help me choose</option></select></div>
+            <div class="form-field"><label for="occasion">Occasion <span aria-hidden="true">*</span></label><select id="occasion" name="occasion" required><option value="" disabled selected>What's the occasion?</option><option>Birthday</option><option>Wedding</option><option>Anniversary</option><option>A little milestone</option><option>Just because</option><option>Other celebration</option></select></div>
+            <div class="form-field"><label for="requested-date">Requested date <span aria-hidden="true">*</span></label><input id="requested-date" name="date" type="date" required aria-describedby="availability-note"></div>
+            <div class="form-field full-width"><label for="cake-message">Message on the cake <span class="optional">(optional)</span></label><textarea id="cake-message" name="message" rows="3" maxlength="100" placeholder="e.g. Happy Birthday, Amaya!"></textarea><span class="field-hint">Up to 100 characters. Keep it short and sweet.</span></div>
+          </div>
+          <p class="availability-note" id="availability-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><span>Your date is a request. We'll confirm availability, the final price, and pickup or delivery on WhatsApp.</span></p>
+          <button class="button button-primary full-width" type="submit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.6-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7c-1 3 2 7 5 8l2-2-2-1-1 1c-1-1-2-2-2-3l1-1-2-2H8Z"/></svg>Send a Cake Enquiry <span aria-hidden="true">↗</span></button>
+          <p class="form-footnote">Review your message before continuing to WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="about-section section-space container" id="about" aria-labelledby="about-title">
+      <div class="about-art"><img src="assets/vanilla.webp" alt="Vanilla bean cake with delicate ivory buttercream on a cream cake stand" width="1024" height="1024" loading="lazy"><div class="about-note">A little care<br>in every crumb.<span aria-hidden="true">♡</span></div></div>
+      <div class="about-copy">
+        <p class="eyebrow">THE HEART BEHIND THE CRUMBS</p>
+        <h2 id="about-title">A small bakery.<br>A <em>big heart.</em></h2>
+        <!-- Replace these paragraphs with your own baker introduction. -->
+        <p>Welcome to Sweet Crumbs, a little corner for cakes and celebrations. We believe a lovely cake can turn an ordinary gathering into a memory worth keeping.</p>
+        <p>From a simple favourite to a cake dreamed up just for your occasion, we're here for the candles, the first slices, and the smiles around the table.</p>
+        <a class="text-link" href="#contact">Let's make something sweet <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="closing-note" aria-label="Explore the cakes"><div class="container"><span aria-hidden="true">✧</span><p>Life's little moments deserve <em>good cake.</em></p><a class="button button-outline" href="#cakes">Find your cake <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand" href="#home"><span>sweet crumbs<span class="brand-subtitle">a little slice of happiness</span></span></a><p>Cakes for the moments<br>you'll want to remember.</p><button class="footer-whatsapp" id="contact-whatsapp" type="button">Let's chat on WhatsApp <span aria-hidden="true">↗</span></button></div>
+      <div class="footer-links"><h2>Take a little look</h2><a href="#cakes">Our cakes</a><a href="#custom">Custom cake orders</a><a href="#about">Our story</a><a href="#home">Back to the top ↑</a></div>
+      <div><h2>Say hello</h2><dl class="contact-list"><dt>WhatsApp</dt><dd id="contact-number">[WHATSAPP_NUMBER]</dd><dt>Instagram</dt><dd><a id="instagram-link" href="#contact">[INSTAGRAM_URL]</a></dd><dt>Opening hours</dt><dd id="opening-hours">[OPENING_HOURS]</dd></dl></div>
+      <div><h2>Find your sweet spot</h2><dl class="contact-list"><dt>Pickup location</dt><dd id="pickup-location">[PICKUP_LOCATION]</dd><dt>Delivery areas</dt><dd id="delivery-areas">[DELIVERY_AREAS]</dd></dl><p class="footer-note">Please confirm pickup or delivery when placing your enquiry.</p></div>
+    </div>
+    <div class="container footer-bottom"><p>© <span id="year">2026</span> Sweet Crumbs.</p><p>A little sweetness goes a long way. <span aria-hidden="true">♡</span></p></div>
+  </footer>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="drawer-header"><div><p class="eyebrow">SOMETHING SWEET</p><h2 id="cart-title">Your cake box</h2></div><button class="icon-button" type="button" data-close="cart-dialog" aria-label="Close cart" autofocus><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+    <p class="sr-only" id="cart-status" role="status" aria-live="polite"></p>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-summary" id="cart-summary"><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">Rs. 0</strong></div><p>Delivery, availability, and the final total will be confirmed by the bakery. No payment is taken here.</p><button class="button button-primary full-width" id="cart-checkout" type="button">Order on WhatsApp <span aria-hidden="true">↗</span></button><button class="continue-button" type="button" data-close="cart-dialog">Keep exploring cakes</button></div>
+  </dialog>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-title" aria-describedby="order-help">
+    <div class="drawer-header"><div><p class="eyebrow">ONE MORE SWEET STEP</p><h2 id="order-title">Your enquiry is ready</h2></div><button class="icon-button" type="button" data-close="order-dialog" aria-label="Close order preview" autofocus><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+    <p id="order-help">Review the details below. Your order is only confirmed after the bakery replies.</p>
+    <textarea class="order-message" id="order-message" aria-label="Prepared WhatsApp enquiry" readonly rows="10"></textarea>
+    <p class="configuration-notice" id="configuration-notice" hidden>The bakery's WhatsApp number hasn't been added yet. You can copy your enquiry now and send it once the contact details are available.</p>
+    <div class="order-actions"><a class="button button-primary" id="whatsapp-link" target="_blank" rel="noopener noreferrer">Continue to WhatsApp <span aria-hidden="true">↗</span></a><button class="button button-outline" id="copy-message" type="button">Copy enquiry</button></div>
+    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
