@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
-<body>
-    
+
+<body style="font-family: 'Times New Roman', Times, serif; background-color: #f0f3f0; padding: 20px;">
+    <h1 style="color: #224b1b;">PulseFit Gym - Membership Application</h1>
+    <form action="#"
+        style="width: 520px; max-width: 90%; margin: auto; background-color: #cbe9c6; padding: 25px; box-sizing: border-box;">
+        <fieldset>
+            <legend><b>Personal Details</b></legend>
+            <label for="name">Full Name:</label><br>
+            <input style="width: 400px;" type="text" id="name" name="name" placeholder="e.g.Nimali Perera"><br><br>
+            <label for="email">Email:</label><br>
+            <input style="width: 400px;" type="email" id="email" name="email"><br><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="text" id="dob" name="dob">
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Membership Details</b></legend>
+            <label for="plan">Membership Plan:</label><br>
+            <select id="plan" name="plan">
+                <option value="">---Select a Plan---</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+            </select><br><br>
+            <label for="duration">Duration:</label><br>
+            <input type="radio" id="month1" name="duration" value="1 month">
+            <label for="monthly">1 Month</label>
+            <input type="radio" id="month3" name="duration" value="3 months">
+            <label for="month3">3 Months</label>
+            <input type="radio" id="month6" name="duration" value="6 months">
+            <label for="month6">6 Months</label>
+            <input type="radio" id="month12" name="duration" value="12 months">
+            <label for="month12">12 Months</label>
+            <br><br>
+
+            <label for="facilities">Add-on Facilities:</label><br>
+
+            <input type="checkbox" id="pool" name="facilities" value="pool">
+            <label for="pool">Swimming Pool</label>
+            <input type="checkbox" id="sauna" name="facilities" value="sauna">
+            <label for="sauna">Sauna</label>
+            <input type="checkbox" id="personal trainer" name="facilities" value="personal trainer">
+            <label for="personal trainer">Personal Trainer</label>
+            <br><br>
+            <label for="health goals">Health Goals:</label><br>
+            <textarea id="health goals" name="health goals" placeholder="Tell us what you want to achieve"></textarea>
+            <br><br>
+
+        </fieldset>
+        <br>
+        <input type="checkbox" id="agree" name="agree">
+        <label for="agree">I agree to the gym rules and regulations.</label>
+        <br><br>
+        <button type="register" id="register"
+            style="background-color: green; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer;">Register</button>
+        <button style="background-color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer;"
+            type="clear" id="clear">Clear Form</button>
+
+    </form>
+
 </body>
+
 </html>
